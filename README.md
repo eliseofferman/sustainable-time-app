@@ -1,4 +1,4 @@
-# Company Project: Change habits – save the environment! 
+# Team Project: Change habits – save the environment! 
 
 So far, in the companies, we've built a business site, an advent calendar, and an online store. We've yet to really flex our React muscles and build an app!
 
