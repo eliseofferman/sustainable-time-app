@@ -7,7 +7,7 @@ The collaboration partner for this print is [Kivra!](https://www.kivra.com/) Eac
 
 Your task this sprint is to build a "Habit tracker" that will encourage a more suistainable lifestyle. An app which users can store their goals in, and then keep track of whether they achieved the goal on a given day. A rough sketch of how the main screen could potentially look is something like this:
 
-![Rough Sketch](https://imgur.com/a/s2Mna)
+![Rough Sketch](https://i.imgur.com/qJFLAmR.jpg)
 
 Unlike the previous tasks, the scope, app design, and general functionality of this app is very undefined, and down to your team to figure out! You definitely will need a planning session for this one.
 
