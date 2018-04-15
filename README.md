@@ -1,18 +1,19 @@
 # Team Project: Change habits – save the environment! 
 
-So far, in the companies, we've built a business site, an advent calendar, and an online store. We've yet to really flex our React muscles and build an app!
+So far, in the team projects, we've built a business site, an easter egg hunt
+, and an online store. We've yet to really flex our React muscles and build an app!
 
-The collaboration partner for this print is Kivra! Each year, over two million window envelops get sent by physical mail. Each and everyone of these are causing problems for our environment and most of these end up in the trash or in best case scenario in long term storage. Over two million people have now signed up to Kivra to get their mail in an more sutainable way – Yay! As you might understand, the environment and sustainabiltiy is something close to heart by all people working at Kivra. A huge part in the work for a more suistanable lifestyle is habits. 
+The collaboration partner for this print is [Kivra!](https://www.kivra.com/) Each year, a huge amounth of envelops get sent by physical mail. Each and everyone of these are causing problems for our environment and most of these end up in the trash or in best case scenario in long term storage. Over two million people have now signed up to Kivra to get their mail in an more sutainable way – Yay! As you might understand, the environment and sustainabiltiy is something close to heart by all people working at Kivra. A huge part in the work for a more suistanable lifestyle is habits. 
 
 Your task this sprint is to build a "Habit tracker" that will encourage a more suistainable lifestyle. An app which users can store their goals in, and then keep track of whether they achieved the goal on a given day. A rough sketch of how the main screen could potentially look is something like this:
 
-![Rough Sketch](https://i.imgur.com/VMMZzDl.png)
+![Rough Sketch](https://imgur.com/a/s2Mna)
 
 Unlike the previous tasks, the scope, app design, and general functionality of this app is very undefined, and down to your team to figure out! You definitely will need a planning session for this one.
 
 ## Design
 
-The app will need a few "screens" at the least; a form to enter goals, some sort of calendar view to mark a day as either completed or not completed, and some sort of way of navigating through time in the calendar so the user can look at their history.
+The app will need a few "screens" at the least; a form to enter goals, some sort of calendar view to mark a day as either completed or not completed, and some sort of way of navigating through time in the calendar so the user catn look at their history.
 
 To be useful, it would be really good for the app to have some form of gamification—something to make the user feel good for completing a goal, and something to make them keep coming back and using the app.
 
