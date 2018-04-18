@@ -2,8 +2,3 @@
   display: flex;
   flex-flow: wrap;
 }
-.day {
-  border: 2px solid black;
-  height: 50px;
-  width: 50px;
-}
