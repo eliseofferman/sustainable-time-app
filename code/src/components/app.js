@@ -1,5 +1,6 @@
 import React from "react"
 import Activity from "./activity"
+import TableRow from "./tablerow"
 
 class App extends React.Component {
   state = {
@@ -25,12 +26,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-      {this.state.activities.map(listActivity =>
-        <div>
-          <h1>{listActivity.title}</h1>
-          <h2>{listActivity.days}</h2>
-        </div>
-      )}
+        {this.state.activities.map(listActivity =>
+          <TableRow activityname={listActivity.title} days={listActivity.days}/>
+        )}
+
         <p>With TimeApp you can
         </p>
         <div>Define the activity you want to track</div>
