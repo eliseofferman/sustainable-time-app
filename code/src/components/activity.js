@@ -11,18 +11,18 @@ class Activity extends React.Component {
     })
   }
 
-  // handleOnSubmit = (event) => {
-  //   event.preventDefault()
-  //   this.props.addToCalendar(this.state.newActivity)
-  //   this.setState({
-  //     newActivity: ""
-  //   })
-  // }
+  handleOnSubmit = (event) => {
+    event.preventDefault()
+    this.props.addToActivities(this.state.newActivity)
+    this.setState({
+      newActivity: ""
+    })
+  }
 
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleOnSubmit}>
           <label>
             <input
               type="text"
