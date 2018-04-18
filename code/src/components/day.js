@@ -7,15 +7,19 @@ class Day extends React.Component{
   }
 
   handleClick = () => {
+
     this.setState({
       isActive: !this.state.isActive
     })
+   const time = prompt("add your time")
   }
 
   render() {
+    console.log(this.props.number)
     return (
       <div className={this.state.isActive ? "active" : "not-active"}
         onClick={this.handleClick}>
+        {this.props.time}
       </div>
     )
   }

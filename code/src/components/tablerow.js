@@ -9,8 +9,10 @@ class TableRow extends React.Component {
       <div>
         <h1>{this.props.activityname}</h1>
         <div className="week">
-          {this.props.days.map( week =>
-          <Day />
+          {this.props.days.map( (day) =>
+
+            // console.log("day", day)
+              <Day time={day}/>
           )}
         </div>
 

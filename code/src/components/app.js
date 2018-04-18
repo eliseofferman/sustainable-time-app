@@ -7,7 +7,7 @@ class App extends React.Component {
     activities: [{
       id: 1,
       title: "Facebook",
-      days: [0, 5, 0, 0, 0, 0, 0]
+      days: [2, 0, 0, 0, 0, 0, 0]
     },{
       id: 2,
       title: "Instagram",
@@ -22,6 +22,8 @@ class App extends React.Component {
       activities: allActivities
     })
   }
+
+
 
   render() {
     return (
