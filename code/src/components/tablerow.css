@@ -1,4 +1,18 @@
+.calendar {
+  display: flex;
+  flex-flow: wrap;
+}
+.calendar h1 {
+  line-height: 20px;
+  padding-left: 20px;
+  text-align: center;
+  width: 200px;
+}
 .week {
   display: flex;
   flex-flow: wrap;
+
+}
+.week h1 {
+  padding-right: 20px;
 }

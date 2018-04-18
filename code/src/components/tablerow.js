@@ -6,7 +6,7 @@ class TableRow extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="calendar">
         <h1>{this.props.activityname}</h1>
         <div className="week">
           {this.props.days.map( (day) =>

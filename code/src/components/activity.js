@@ -1,4 +1,5 @@
 import React from "react"
+import "./activity.css"
 
 class Activity extends React.Component {
   state = {
@@ -21,7 +22,7 @@ class Activity extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="activity">
         <form onSubmit={this.handleOnSubmit}>
           <label>
             <input
@@ -32,7 +33,7 @@ class Activity extends React.Component {
               onChange={this.handleOnChange}
             />
           </label>
-          <button>Add Activity</button>
+          <button className="activity-button">Add Activity</button>
         </form>
       </div>
     )

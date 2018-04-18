@@ -1,5 +1,6 @@
 import React from "react"
 import Activity from "./activity"
+import Header from "./header"
 import TableRow from "./tablerow"
 
 class App extends React.Component {
@@ -23,26 +24,23 @@ class App extends React.Component {
     })
   }
 
-
-
   render() {
     return (
       <div>
+
+        <Header />
+
+        <div className="input-activity">
+          <Activity addToActivities={this.addToCalendar}/>
+        </div>
+
         {this.state.activities.map(listActivity =>
           <TableRow activityname={listActivity.title} days={listActivity.days}/>
         )}
 
-        <p>With TimeApp you can
-        </p>
-        <div>Define the activity you want to track</div>
-        <div>Submit the time (minutes) you are dedicating to that activity</div>
-        <div>
-          <Activity addToActivities={this.addToCalendar}/>
-        </div>
       </div>
     )
   }
-
 }
 
 export default App
