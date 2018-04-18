@@ -1,3 +1,28 @@
 .header {
   padding: 20px;
 }
+
+.header h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.header p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.header ol {
+  font-size: 14px;
+  text-align: center;
+}
+
+.header-image {
+  width: 350px;
+  height: auto;
+  text-align: center;
+}
+
+.header-image-container {
+  text-align: center;
+}

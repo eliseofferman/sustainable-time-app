@@ -1,8 +1,11 @@
 .calendar {
   display: flex;
   flex-flow: wrap;
+  justify-content: center;
 }
+
 .calendar h1 {
+  font-size: 25px;
   line-height: 20px;
   padding-left: 20px;
   text-align: center;

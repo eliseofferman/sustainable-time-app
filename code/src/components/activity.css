@@ -1,7 +1,13 @@
 .activity {
   margin-bottom: 20px;
   padding-left: 40px;
+  text-align: center;
 }
+
+.activity form {
+  align-items: center;
+}
+
 .activity-button {
   margin-left: 20px;
 }
