@@ -4,21 +4,29 @@ import Header from "./header"
 import TableRow from "./tablerow"
 
 class App extends React.Component {
-  state = {
-    activities: [{
-      id: 1,
-      title: "Facebook",
-      days: [2, 0, 0, 0, 0, 0, 0]
-    },{
-      id: 2,
-      title: "Instagram",
-      days: [0, 0, 0, 0, 0, 0, 0]
-    }]
-  }
+
+
+  constructor(props) {
+    super(props)
+
+  const activityList = JSON.parse(localStorage.getItem("saveActivities"))
+   if(activityList) {
+     this.state = {activities: activityList}
+   } else {
+     this.state = {activities: []}
+   }
+}
+
+
+
+
 
   addToCalendar = (activity) => {
     const allActivities = this.state.activities
     allActivities.push({ id: Date.now(), title: activity, days: [0, 0, 0, 0, 0, 0, 0] })
+
+    localStorage.setItem("saveActivities", JSON.stringify(allActivities))
+
     this.setState({
       activities: allActivities
     })
@@ -43,3 +51,14 @@ class App extends React.Component {
 }
 
 export default App
+
+// state = {
+//   activities: [{
+//     id: 1,
+//     title: "Facebook",
+//     days: [2, 0, 0, 0, 0, 0, 0]
+//   },{
+//     id: 2,
+//     title: "Instagram",
+//     days: [0, 0, 0, 0, 0, 0, 0]
+//   }]

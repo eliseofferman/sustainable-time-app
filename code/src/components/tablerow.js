@@ -12,7 +12,7 @@ class TableRow extends React.Component {
           {this.props.days.map( (day) =>
 
             // console.log("day", day)
-              <Day time={day}/>
+              <Day    time={day}/>
           )}
         </div>
 
