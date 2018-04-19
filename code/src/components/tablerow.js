@@ -9,10 +9,10 @@ class TableRow extends React.Component {
       <div className="calendar">
         <h1>{this.props.activityname}</h1>
         <div className="week">
-          {this.props.days.map( (day) =>
+          {this.props.days.map( (day, index) =>
 
             // console.log("day", day)
-              <Day    time={day}/>
+              <Day    time={day} callbackTimeTable={this.props.callbackTime} index={index}/>
           )}
         </div>
 

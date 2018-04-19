@@ -12,10 +12,12 @@ class Day extends React.Component{
       isActive: !this.state.isActive
     })
    const time = prompt("add your time")
+   this.props.callbackTimeTable(time, this.props.index)
   }
 
   render() {
-    console.log(this.props.number)
+    console.log(this.props.index)
+
     return (
       <div className={this.state.isActive ? "active" : "not-active"}
         onClick={this.handleClick}>

@@ -18,12 +18,23 @@ class App extends React.Component {
 }
 
 
+printTime = (activityMinutes, index) => {
+  const testActivities = this.state.activities
+  const testActivitiesDay = this.state.activities[4].days[0]
+  // testActivitiesDay = activityMinutes
+  // this.state.activities[4].days[0] = activityMinutes
 
+
+  console.log("Elise", this.state.activities[4].days[0])
+  this.setState({
+
+  })
+}
 
 
   addToCalendar = (activity) => {
     const allActivities = this.state.activities
-    allActivities.push({ id: Date.now(), title: activity, days: [0, 0, 0, 0, 0, 0, 0] })
+    allActivities.push({ id: Date.now(), title: activity, days: [22, 0, 0, 0, 0, 0, 0] })
 
     localStorage.setItem("saveActivities", JSON.stringify(allActivities))
 
@@ -42,7 +53,7 @@ class App extends React.Component {
         </div>
 
         {this.state.activities.map(listActivity =>
-          <TableRow activityname={listActivity.title} days={listActivity.days}/>
+          <TableRow activityname={listActivity.title} days={listActivity.days} callbackTime={this.printTime}/>
         )}
 
       </div>
