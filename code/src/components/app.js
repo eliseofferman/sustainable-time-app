@@ -20,12 +20,14 @@ class App extends React.Component {
 
 printTime = (activityMinutes, index) => {
   const testActivities = this.state.activities
-  const testActivitiesDay = this.state.activities[4].days[0]
-  // testActivitiesDay = activityMinutes
+  this.state.activities[0].days[index] = activityMinutes
+  const testActivitiesDay = this.state.activities[0].days[0]
+
+console.log("Helll", testActivitiesDay);
   // this.state.activities[4].days[0] = activityMinutes
 
 
-  console.log("Elise", this.state.activities[4].days[0])
+  // console.log("Elise", this.state.activities[0].days[0])
   this.setState({
 
   })
