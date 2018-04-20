@@ -17,28 +17,33 @@ class App extends React.Component {
    }
 }
 
+componentDidUpdate(){
+  // const allActivities = this.state.activities
+  localStorage.setItem("saveActivities", JSON.stringify(this.state.activities))
+  console.log("hej");
+}
 
-printTime = (activityMinutes, index) => {
+printTime = (activityMinutes, indexcolumn, indexrow) => {
   const testActivities = this.state.activities
-  this.state.activities[0].days[index] = activityMinutes
-  const testActivitiesDay = this.state.activities[0].days[0]
+  this.state.activities[indexrow].days[indexcolumn] = activityMinutes
+  const testActivitiesDay = this.state.activities[indexrow].days[indexcolumn]
 
-console.log("Helll", testActivitiesDay);
+console.log("Helll", this.state);
   // this.state.activities[4].days[0] = activityMinutes
 
 
   // console.log("Elise", this.state.activities[0].days[0])
   this.setState({
-
+  activities: testActivities
   })
 }
 
 
   addToCalendar = (activity) => {
     const allActivities = this.state.activities
-    allActivities.push({ id: Date.now(), title: activity, days: [22, 0, 0, 0, 0, 0, 0] })
+    allActivities.push({ id: Date.now(), title: activity, days: [0, 0, 0, 0, 0, 0, 0] })
 
-    localStorage.setItem("saveActivities", JSON.stringify(allActivities))
+
 
     this.setState({
       activities: allActivities
@@ -54,8 +59,8 @@ console.log("Helll", testActivitiesDay);
           <Activity addToActivities={this.addToCalendar}/>
         </div>
 
-        {this.state.activities.map(listActivity =>
-          <TableRow activityname={listActivity.title} days={listActivity.days} callbackTime={this.printTime}/>
+        {this.state.activities.map((listActivity, index) =>
+          <TableRow activityname={listActivity.title} days={listActivity.days} callbackTime={this.printTime} index={index}/>
         )}
 
       </div>
@@ -64,14 +69,3 @@ console.log("Helll", testActivitiesDay);
 }
 
 export default App
-
-// state = {
-//   activities: [{
-//     id: 1,
-//     title: "Facebook",
-//     days: [2, 0, 0, 0, 0, 0, 0]
-//   },{
-//     id: 2,
-//     title: "Instagram",
-//     days: [0, 0, 0, 0, 0, 0, 0]
-//   }]

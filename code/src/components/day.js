@@ -12,7 +12,7 @@ class Day extends React.Component{
       isActive: !this.state.isActive
     })
    const time = prompt("add your time")
-   this.props.callbackTimeTable(time, this.props.index)
+   this.props.callbackTimeTable(time, this.props.indexcolumn, this.props.indexrow)
   }
 
   render() {

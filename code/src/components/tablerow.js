@@ -12,7 +12,7 @@ class TableRow extends React.Component {
           {this.props.days.map( (day, index) =>
 
             // console.log("day", day)
-              <Day    time={day} callbackTimeTable={this.props.callbackTime} index={index}/>
+              <Day time={day} callbackTimeTable={this.props.callbackTime} indexcolumn={index} indexrow={this.props.index}/>
           )}
         </div>
 
