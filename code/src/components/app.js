@@ -31,9 +31,9 @@ class App extends React.Component {
 
   printTime = (activityMinutes, indexcolumn, indexrow) => {
 
-    let totalTime = 0
 
-    totalTime = totalTime + parseInt(activityMinutes)
+
+    let totalTime = this.state.activities[indexrow].days[indexcolumn] + parseInt(activityMinutes)
     const testActivities = this.state.activities
     this.state.activities[indexrow].days[indexcolumn] = totalTime
     this.setState({
