@@ -27,11 +27,15 @@ class App extends React.Component {
     this.setState({ activities: act })
   }
 
-  printTime = (activityMinutes, indexcolumn, indexrow) => {
-    const totalTime = activityMinutes
 
+
+  printTime = (activityMinutes, indexcolumn, indexrow) => {
+
+    let totalTime = 0
+
+    totalTime = totalTime + parseInt(activityMinutes)
     const testActivities = this.state.activities
-    this.state.activities[indexrow].days[indexcolumn] = activityMinutes
+    this.state.activities[indexrow].days[indexcolumn] = totalTime
     this.setState({
     activities: testActivities
     })
