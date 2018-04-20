@@ -18,21 +18,14 @@ class App extends React.Component {
 }
 
 componentDidUpdate(){
-  // const allActivities = this.state.activities
   localStorage.setItem("saveActivities", JSON.stringify(this.state.activities))
-  console.log("hej");
 }
 
 printTime = (activityMinutes, indexcolumn, indexrow) => {
+  const totalTime = activityMinutes
+
   const testActivities = this.state.activities
   this.state.activities[indexrow].days[indexcolumn] = activityMinutes
-  const testActivitiesDay = this.state.activities[indexrow].days[indexcolumn]
-
-console.log("Helll", this.state);
-  // this.state.activities[4].days[0] = activityMinutes
-
-
-  // console.log("Elise", this.state.activities[0].days[0])
   this.setState({
   activities: testActivities
   })
