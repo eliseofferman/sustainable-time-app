@@ -17,18 +17,24 @@ class App extends React.Component {
    }
 }
 
-componentDidUpdate(){
-  localStorage.setItem("saveActivities", JSON.stringify(this.state.activities))
-}
+  componentDidUpdate(){
+    localStorage.setItem("saveActivities", JSON.stringify(this.state.activities))
+  }
 
-printTime = (activityMinutes, indexcolumn, indexrow) => {
-  const totalTime = activityMinutes
+  deleteActivity = (index) => {
+    const act = this.state.activities
+    act.splice(index, 1)
+    this.setState({ activities: act })
+  }
 
-  const testActivities = this.state.activities
-  this.state.activities[indexrow].days[indexcolumn] = activityMinutes
-  this.setState({
-  activities: testActivities
-  })
+  printTime = (activityMinutes, indexcolumn, indexrow) => {
+    const totalTime = activityMinutes
+
+    const testActivities = this.state.activities
+    this.state.activities[indexrow].days[indexcolumn] = activityMinutes
+    this.setState({
+    activities: testActivities
+    })
 }
 
 
@@ -53,7 +59,7 @@ printTime = (activityMinutes, indexcolumn, indexrow) => {
         </div>
 
         {this.state.activities.map((listActivity, index) =>
-          <TableRow activityname={listActivity.title} days={listActivity.days} callbackTime={this.printTime} index={index}/>
+          <TableRow activityname={listActivity.title} days={listActivity.days} callbackTime={this.printTime} callbackDelete={this.deleteActivity} index={index}/>
         )}
 
       </div>
