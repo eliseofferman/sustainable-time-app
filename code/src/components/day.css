@@ -7,7 +7,7 @@
   width: 50px;
 }
 .active {
-  background-color: blue;
+  background-color: #f9b593;
   border: 2px solid black;
   border-radius: 10px;
   color: white;
