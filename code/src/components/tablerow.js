@@ -20,8 +20,8 @@ class TableRow extends React.Component {
               <Day time={day} callbackTimeTable={this.props.callbackTime} indexcolumn={index} indexrow={this.props.index}/>
           )}
         </div>
-        <div onClick={this.deleteRow}>
-          <p>(X)</p>
+        <div className="removeButton"onClick={this.deleteRow}>
+          <button>Remove row</button>
         </div>
 
       </div>
