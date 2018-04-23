@@ -1,10 +1,10 @@
-.calendar {
+.tablerow {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
 }
 
-.calendar h1 {
+.tablerow h1 {
   font-size: 25px;
   line-height: 20px;
   padding-left: 20px;
@@ -17,7 +17,7 @@
 
 }
 .week h1 {
-  padding-right: 20px;
+  padding-right: 0px;
 }
 
 button{
@@ -27,7 +27,7 @@ button{
  color: white;
  padding: 8px 15px;
  text-align: center;
- font-size: 16px;
+ font-size: 14px;
  opacity: 0.6;
  transition: 0.3s;
  display: inline-block;

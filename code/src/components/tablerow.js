@@ -11,7 +11,7 @@ class TableRow extends React.Component {
   render() {
 
     return (
-      <div className="calendar">
+      <div className="tablerow">
         <h1>{this.props.activityname}</h1>
         <div className="week">
           {this.props.days.map( (day, index) =>
@@ -21,7 +21,7 @@ class TableRow extends React.Component {
           )}
         </div>
         <div className="removeButton"onClick={this.deleteRow}>
-          <button>Remove row</button>
+          <button>Remove Activity</button>
         </div>
 
       </div>

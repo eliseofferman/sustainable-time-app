@@ -1,6 +1,7 @@
 import React from "react"
 import Activity from "./activity"
 import Header from "./header"
+import Calendar from "./calendar"
 import TableRow from "./tablerow"
 
 class App extends React.Component {
@@ -61,7 +62,7 @@ class App extends React.Component {
         <div className="input-activity">
           <Activity addToActivities={this.addToCalendar}/>
         </div>
-
+        <Calendar />
         {this.state.activities.map((listActivity, index) =>
           <TableRow activityname={listActivity.title} days={listActivity.days} callbackTime={this.printTime} callbackDelete={this.deleteActivity} index={index}/>
         )}
