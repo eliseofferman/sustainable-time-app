@@ -6,8 +6,9 @@
 
 .tablerow h4 {
   font-size: 15px;
-  line-height: 20px;
-  padding-left: 20px;
+  margin: 5px;
+  /* line-height: 20px; */
+  /* padding: 0px 40px; */
   text-align: center;
 
 }
@@ -21,23 +22,24 @@
 }
 
 .removeButton button{
- margin: 7px;
- border: 1px solid #e06358;
- color: white;
- padding: 8px 10px;
- text-align: center;
- font-size: 14px;
+ margin: 2px;
+ padding: 8px 11px;
  opacity: 0.6;
  transition: 0.3s;
  display: inline-block;
  text-decoration: none;
  cursor: pointer;
+ border-radius: 100%;
 }
 
 button:hover {
   opacity: 1;
+  background-color: #e06358;
 }
 
 .activityDetails {
+  width: 350px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

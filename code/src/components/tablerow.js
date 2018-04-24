@@ -32,12 +32,17 @@ class TableRow extends React.Component {
           {this.props.days.map(( day, index) =>
             <Day time={day} callbackTimeTable={this.props.callbackTime} indexcolumn={index} indexrow={this.props.index} />) }
         </div>
+
         <div className="activityDetails">
+
           <h4>{this.props.activityname}</h4>
-          <div className="removeButton"onClick={this.deleteRow}>
-            <button>🗑️</button>
+
+            <h4>
             {this.renderTotalActivityTime()}
-          </div>
+            </h4>
+            <div className="removeButton"onClick={this.deleteRow}>
+              <button>🗑️</button>
+              </div>
         </div>
 
       </div>
