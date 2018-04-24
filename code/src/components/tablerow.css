@@ -1,26 +1,24 @@
 .tablerow {
   display: flex;
+  flex-direction: column;
   flex-flow: wrap;
   justify-content: center;
 }
-
 .tablerow h4 {
   font-size: 15px;
   margin: 5px;
-  /* line-height: 20px; */
-  /* padding: 0px 40px; */
   text-align: center;
-
+  text-transform: uppercase;
 }
 .week {
   display: flex;
   flex-flow: wrap;
+  justify-content: center;
 
 }
 .week h1 {
   padding-right: 0px;
 }
-
 .removeButton button{
  margin: 2px;
  padding: 8px 11px;
@@ -37,9 +35,15 @@ button:hover {
   background-color: #e06358;
 }
 
-.activityDetails {
-  width: 350px;
+.activity-details {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  width: 350px;
+}
+
+@media (min-width: 700px) {
+  .week {
+    width: 100%;
+  }
 }

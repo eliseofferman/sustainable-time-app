@@ -15,7 +15,7 @@ class TableRow extends React.Component {
    } else {
      const hours = Math.floor(sum / 60)
      sum = sum - (hours * 60)
-     return (`${hours}h, ${sum}min`)
+     return (`${hours}hr, ${sum}min`)
    }
  }
 
@@ -30,19 +30,20 @@ class TableRow extends React.Component {
 
         <div className="week">
           {this.props.days.map(( day, index) =>
-            <Day time={day} callbackTimeTable={this.props.callbackTime} indexcolumn={index} indexrow={this.props.index} />) }
+            <Day
+              time={day}
+              callbackTimeTable={this.props.callbackTime}
+              indexcolumn={index}
+              indexrow={this.props.index}
+            />) }
         </div>
 
-        <div className="activityDetails">
-
+        <div className="activity-details">
           <h4>{this.props.activityname}</h4>
-
-            <h4>
-            {this.renderTotalActivityTime()}
-            </h4>
-            <div className="removeButton"onClick={this.deleteRow}>
-              <button>🗑️</button>
-              </div>
+          <h4>{this.renderTotalActivityTime()}</h4>
+          <div className="removeButton"onClick={this.deleteRow}>
+            <button>🗑️</button>
+          </div>
         </div>
 
       </div>
