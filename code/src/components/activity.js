@@ -28,12 +28,16 @@ class Activity extends React.Component {
             <input
               type="text"
               name="activity"
-              placeholder="add activity here"
+              placeholder="Add activity here"
               value={this.state.newActivity}
               onChange={this.handleOnChange}
             />
           </label>
-          <button className="activity-button">+</button>
+          <button className="activity-button">
+            <span className="button-text">
+              +
+            </span>
+          </button>
         </form>
       </div>
     )
