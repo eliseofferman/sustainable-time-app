@@ -1,7 +1,7 @@
 import React from "react"
 import "./day.css"
 
-class Day extends React.Component{
+class Day extends React.Component {
 
   renderTime = (time) => {
    if(time < 60){
@@ -14,7 +14,7 @@ class Day extends React.Component{
  }
 
   handleClick = () => {
-   const time = prompt("add your time")
+   const time = prompt("add your time in minutes")
    this.props.callbackTimeTable(time, this.props.indexcolumn, this.props.indexrow)
   }
 
