@@ -33,7 +33,7 @@ class Activity extends React.Component {
               onChange={this.handleOnChange}
             />
           </label>
-          <button className="activity-button">Add Activity</button>
+          <button className="activity-button">+</button>
         </form>
       </div>
     )

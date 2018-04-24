@@ -12,7 +12,7 @@ class TableRow extends React.Component {
 
     return (
       <div className="tablerow">
-        <h1>{this.props.activityname}</h1>
+
         <div className="week">
           {this.props.days.map( (day, index) =>
 
@@ -20,8 +20,11 @@ class TableRow extends React.Component {
               <Day time={day} callbackTimeTable={this.props.callbackTime} indexcolumn={index} indexrow={this.props.index}/>
           )}
         </div>
-        <div className="removeButton"onClick={this.deleteRow}>
-          <button>Remove Activity</button>
+        <div className="activityDetails">
+          <h4>{this.props.activityname}</h4>
+          <div className="removeButton"onClick={this.deleteRow}>
+            <button>🗑️</button>
+          </div>
         </div>
 
       </div>

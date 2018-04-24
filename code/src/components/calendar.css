@@ -1,4 +1,5 @@
 .calendar {
+  /* position: fixed; */
   display: flex;
   flex-flow: wrap;
   justify-content: center;
@@ -6,10 +7,10 @@
 }
 .daybox {
   align-items: center;
-  background-color: #a493f9;
-  border: 2px solid black;
-  border-radius: 10px;
-  border-radius: 10px;
+  background-color: #93f9b7;
+  border: 4px solid #58e087;
+  /* border-radius: 10px;
+  border-radius: 10px; */
   height: 50px;
   margin-bottom: 4px;
   margin-right: 1px;
@@ -19,8 +20,7 @@
 }
 .select-week {
   background-color: #93d6f9;
-  border: 2px solid black;
-  border-radius: 10px;
+  border: 4px solid #58b0e0;
   margin-bottom: 4px;
   margin-right: 1px;
   padding: 12px;

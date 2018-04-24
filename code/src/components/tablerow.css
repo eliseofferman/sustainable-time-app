@@ -4,12 +4,12 @@
   justify-content: center;
 }
 
-.tablerow h1 {
-  font-size: 25px;
+.tablerow h4 {
+  font-size: 15px;
   line-height: 20px;
   padding-left: 20px;
   text-align: center;
-  width: 200px;
+
 }
 .week {
   display: flex;
@@ -20,12 +20,11 @@
   padding-right: 0px;
 }
 
-button{
+.removeButton button{
  margin: 7px;
- background-color: #03a9f4c2;
- border: none;
+ border: 1px solid #e06358;
  color: white;
- padding: 8px 15px;
+ padding: 8px 10px;
  text-align: center;
  font-size: 14px;
  opacity: 0.6;
@@ -33,9 +32,12 @@ button{
  display: inline-block;
  text-decoration: none;
  cursor: pointer;
- border-radius: 5px;
 }
 
 button:hover {
   opacity: 1;
+}
+
+.activityDetails {
+  display: flex;
 }
