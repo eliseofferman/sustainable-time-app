@@ -15,17 +15,14 @@ class Day extends React.Component {
 
   handleClick = () => {
     let time = prompt("Add your time in minutes")
-      if (time == null) {
-        console.log("null", time)
-        time = 0
-      } else if (time >= 0) {
-        console.log("correct number", time)
-      } else {
-        console.log("not a vaid number", time)
+      if (!(time >= 0)) {
         time = prompt(`Sorry, "${time}" is not a correct number, please add your time in minutes`)
       }
-
-    this.props.callbackTimeTable(time, this.props.indexcolumn, this.props.indexrow)
+      else if(time == null) {
+      }
+        else {
+        this.props.callbackTimeTable(time, this.props.indexcolumn, this.props.indexrow)
+      }
   }
 
   render() {
