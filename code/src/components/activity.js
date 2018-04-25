@@ -28,7 +28,7 @@ class Activity extends React.Component {
             <input
               type="text"
               name="activity"
-              placeholder="Add activity here"
+              placeholder="Type activity here"
               value={this.state.newActivity}
               onChange={this.handleOnChange}
             />
