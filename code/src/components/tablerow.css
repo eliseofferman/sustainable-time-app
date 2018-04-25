@@ -19,7 +19,8 @@
 .week h1 {
   padding-right: 0px;
 }
-.remove-button button{
+
+.removeButton button{
  margin: 2px;
  padding: 8px 11px;
  transition: 0.2s;
@@ -29,7 +30,7 @@
  border-radius: 100%;
 }
 
-.remove-button button:hover {
+.removeButton button:hover {
   background-color: #f993b4;
 }
 
@@ -45,12 +46,5 @@
 @media (min-width: 700px) {
   .week {
     width: 100%;
-  }
-}
-
-@media (min-width: 900px) {
-  .tablerow {
-  
-
   }
 }
