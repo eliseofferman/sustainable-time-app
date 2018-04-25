@@ -43,13 +43,14 @@
   width: 355px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   .week {
     width: 100%;
   }
 }
 
-@media (min-width: 900px) {
+
+@media (min-width: 1550px) {
   .week {
     display: flex;
     flex-flow: wrap;

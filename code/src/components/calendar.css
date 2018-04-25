@@ -32,7 +32,31 @@
   flex-direction: row;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 913px) {
+  .select-week{
+    background-color: #93f9b7;
+    border: 4px solid #58e087;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1px auto;
+    padding: 12px;
+    text-align: center;
+    width: 610px;
+  }
+  .daybox {
+    align-items: center;
+    background-color: #93d6f9;
+    border: 4px solid #58b0e0;
+    height: 80px;
+    padding: 12px;
+    text-align: center;
+    width: 80px;
+    margin: 4px;
+  }
+}
+
+@media (min-width: 1550px) {
   .daybox {
     align-items: center;
     background-color: #93d6f9;
