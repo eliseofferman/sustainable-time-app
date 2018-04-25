@@ -42,9 +42,11 @@ class TableRow extends React.Component {
           <h4>{this.props.activityname}</h4>
           <h4>{this.renderTotalActivityTime()}</h4>
           <div className="removeButton"onClick={this.deleteRow}>
-            <button>🗑️</button>
+            <h4>{this.renderTotalActivityTime()}</h4>
+            <div className="remove-button"onClick={this.deleteRow}>
+              <button>🗑️</button>
+            </div>
           </div>
-        </div>
 
       </div>
     )
