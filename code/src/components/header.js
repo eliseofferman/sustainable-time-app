@@ -6,9 +6,9 @@ class Header extends React.Component{
     return (
       <div className="header">
         <div className="header-image-container">
-          <img className="header-image" src= { require('./images/time.png') }  />
+          <img className="header-image" src= { require('./images/time.jpg') }  />
         </div>
-        <h1>Welcome to the ReactTimeApp</h1>
+        <h1>The Kivra time app</h1>
         <p>With this app you are able to track the time you spend on the activities of your choice.</p>
         <div>
           <p>1. Define the activity you want to track using the "Add Activity" field below.</p>

@@ -1,3 +1,7 @@
+* {
+font-family: 'Roboto', sans-serif;
+}
+
 .header {
   padding: 20px;
 }
@@ -18,11 +22,21 @@
 }
 
 .header-image {
-  width: 350px;
+  width: 700px;
   height: auto;
-  text-align: center;
 }
 
 .header-image-container {
   text-align: center;
+}
+
+h1 {
+  color: #8dc746;
+}
+
+@media (max-width: 600px) {
+.header-image {
+  width: 350px;
+  height: auto;
+}
 }

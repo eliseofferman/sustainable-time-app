@@ -3,6 +3,7 @@
   flex-direction: column;
   flex-flow: wrap;
   justify-content: center;
+  padding-bottom: 20px;
 }
 .tablerow h4 {
   font-size: 15px;
@@ -44,5 +45,12 @@
 @media (min-width: 700px) {
   .week {
     width: 100%;
+  }
+}
+
+@media (min-width: 900px) {
+  .tablerow {
+  
+
   }
 }
