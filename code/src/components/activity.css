@@ -29,6 +29,7 @@
 .activity button:hover {
   background-color: #58e087;
   border: 4px solid #58e087;
+  color: white;
 }
 /* It's not fully functional, the  */
 .activity-button span:hover {
