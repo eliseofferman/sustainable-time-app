@@ -14,32 +14,31 @@
   display: flex;
   flex-flow: wrap;
   justify-content: center;
-
 }
 .week h1 {
   padding-right: 0px;
 }
-.removeButton button{
+.remove-button button{
  margin: 2px;
  padding: 8px 11px;
- opacity: 0.6;
- transition: 0.3s;
+ transition: 0.2s;
  display: inline-block;
  text-decoration: none;
  cursor: pointer;
  border-radius: 100%;
 }
 
-button:hover {
-  opacity: 1;
-  background-color: #e06358;
+.remove-button button:hover {
+  background-color: #f993b4;
 }
 
 .activity-details {
   align-items: center;
+  background: #dcdcdc;
   display: flex;
+  margin: 1px auto;
   justify-content: space-between;
-  width: 350px;
+  width: 355px;
 }
 
 @media (min-width: 700px) {

@@ -3,9 +3,7 @@ import "./calendar.css"
 
 class Calendar extends React.Component {
 
-
   render() {
-
     return (
       <div className="calendar">
         <div className="select-week">
@@ -24,7 +22,6 @@ class Calendar extends React.Component {
       </div>
     )
   }
-
 }
 
 export default Calendar
