@@ -12,11 +12,12 @@
   text-align: center;
   text-transform: uppercase;
 }
-
 .week {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
+  margin: 0px auto;
+  width: 357px;
 }
 
 .week h1 {
@@ -24,13 +25,13 @@
 }
 
 .removeButton button {
+  border-radius: 100%;
+  cursor: pointer;
+  display: inline-block;
   margin: 2px;
   padding: 8px 11px;
   transition: 0.2s;
-  display: inline-block;
   text-decoration: none;
-  cursor: pointer;
-  border-radius: 100%;
 }
 
 .removeButton button:hover {
@@ -43,37 +44,27 @@
   display: flex;
   margin: 1px auto;
   justify-content: space-between;
-  width: 355px;
+  width: 357px;
 }
 
-@media (min-width: 500px) {
+@media (max-width: 899px) {
   .week {
-    width: 100%;
+    width: 567px;
   }
 }
-
-@media (min-width: 1550px) {
+@media (min-width: 900px) {
   .week {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-between;
-    width: 100%;
-    padding-left: 30%;
-    padding-right: 30%;
-    margin: 20px;
-  }
-  .tablerow {
-    display: flex;
-    flex-direction: column;
-    flex-flow: wrap;
-    width: 100%;
+    width: 567px;
   }
   .activity-details {
-    align-items: center;
-    background: #dcdcdc;
-    display: flex;
-    margin: 1px auto;
-    justify-content: space-between;
-    width: 38%;
+    width: 567px;
+  }
+}
+@media (min-width: 1120px) {
+  .activity-details {
+    width: 847px;
+  }
+  .week {
+    width: 847px;
   }
 }

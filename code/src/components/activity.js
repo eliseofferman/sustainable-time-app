@@ -22,7 +22,7 @@ class Activity extends React.Component {
 
   render() {
     return (
-      <div className="activity">
+      <div id="one" className="activity">
         <form onSubmit={this.handleOnSubmit}>
           <label>
             <input
