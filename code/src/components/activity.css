@@ -1,7 +1,14 @@
-.activity input, .activity button {
-  align-content: space-between;
+/* .activity {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  margin: auto auto;
+  width: 357px;
+} */
+.activity input, .activity button {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   margin: 10px auto;
 }
 
@@ -16,15 +23,15 @@
   height: 40px;
   padding: 4px;
   text-align: center;
-  width: 200px;
+  width: 357px;
 }
 
 .activity button {
+  align-items: center;
   border: 4px solid #58b0e0;
-  border-radius: 100%;
-  height: 66px;
-  position: relative;
-  width: 66px;
+  height: 40px;
+  padding-top: 6px;
+  width: 357px;
 }
 .activity button:hover {
   background-color: #58e087;
@@ -37,9 +44,35 @@
 }
 .button-text {
   color: #58b0e0;
-  font-size: 60px;
-  position: absolute;
-  top: 46%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-size: 16px;
+}
+@media (min-width: 900px) {
+  .activity input {
+    height: 60px;
+    padding: 4px;
+    width: 567px;
+  }
+  .activity button {
+    height: 60px;
+    padding-top: 4px;
+    width: 567px;
+  }
+  .button-text {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1120px) {
+  .activity input {
+    height: 60px;
+    padding: 4px;
+    width: 847px;
+  }
+  .activity button {
+    height: 60px;
+    padding-top: 6px;
+    width: 847px;
+  }
+  .button-text {
+    font-size: 36px;
+  }
 }

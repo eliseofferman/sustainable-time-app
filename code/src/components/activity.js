@@ -22,7 +22,7 @@ class Activity extends React.Component {
 
   render() {
     return (
-      <div id="one" className="activity">
+      <div className="activity">
         <form onSubmit={this.handleOnSubmit}>
           <label>
             <input
@@ -35,7 +35,7 @@ class Activity extends React.Component {
           </label>
           <button className="activity-button">
             <span className="button-text">
-              +
+              Click to submit activity
             </span>
           </button>
         </form>

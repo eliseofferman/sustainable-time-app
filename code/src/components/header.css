@@ -3,7 +3,9 @@ font-family: 'Roboto', sans-serif;
 }
 
 .header {
-  padding: 20px;
+  margin: 0px auto;
+  padding: 0px;
+  width: 357px;
 }
 
 .header h1 {
@@ -22,21 +24,19 @@ font-family: 'Roboto', sans-serif;
 }
 
 .header-image {
-  width: 700px;
   height: auto;
-}
-
-.header-image-container {
-  text-align: center;
+  width: 357px;
 }
 
 h1 {
   color: #8dc746;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 900px) {
+  .header {
+    width: 567px;
+  }
 .header-image {
-  width: 350px;
-  height: auto;
+  width: 567px;
 }
 }
