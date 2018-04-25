@@ -42,7 +42,6 @@ class App extends React.Component {
     })
 }
 
-
   addToCalendar = (activity) => {
     const allActivities = this.state.activities
     allActivities.push({ id: Date.now(), title: activity, days: [0, 0, 0, 0, 0, 0, 0] })

@@ -5,29 +5,32 @@
   justify-content: center;
   padding-bottom: 20px;
 }
+
 .tablerow h4 {
   font-size: 15px;
   margin: 5px;
   text-align: center;
   text-transform: uppercase;
 }
+
 .week {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
 }
+
 .week h1 {
   padding-right: 0px;
 }
 
-.removeButton button{
- margin: 2px;
- padding: 8px 11px;
- transition: 0.2s;
- display: inline-block;
- text-decoration: none;
- cursor: pointer;
- border-radius: 100%;
+.removeButton button {
+  margin: 2px;
+  padding: 8px 11px;
+  transition: 0.2s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 100%;
 }
 
 .removeButton button:hover {
@@ -49,7 +52,6 @@
   }
 }
 
-
 @media (min-width: 1550px) {
   .week {
     display: flex;
@@ -64,9 +66,7 @@
     display: flex;
     flex-direction: column;
     flex-flow: wrap;
-
     width: 100%;
-
   }
   .activity-details {
     align-items: center;
@@ -74,6 +74,6 @@
     display: flex;
     margin: 1px auto;
     justify-content: space-between;
-    width: 39%;
+    width: 38%;
   }
 }

@@ -13,7 +13,6 @@ class Header extends React.Component{
         <div>
           <p>1. Define the activity you want to track using the "Add Activity" field below.</p>
           <p>2. Submit the time (minutes) you are dedicating to that activity.</p>
-          <p>3. And what else???</p>
         </div>
       </div>
     )
