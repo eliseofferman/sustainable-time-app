@@ -20,3 +20,30 @@
   text-align: center;
   width: 50px;
 }
+
+@media (min-width: 900px) {
+  .not-active {
+    border: 3px solid #93f9b7;
+    color: #58e087;
+    cursor: pointer;
+    height: 80px;
+    margin-right: 1px;
+    padding: 8px;
+    text-align: center;
+    width: 80px;
+
+  }
+  .active {
+    background-color: #f993b4;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    height: 80px;
+    margin-right: 1px;
+    padding: 6px;
+    text-align: center;
+    width: 80px;
+
+  }
+}

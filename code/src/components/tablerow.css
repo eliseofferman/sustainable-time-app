@@ -43,8 +43,36 @@
   width: 355px;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
   .week {
     width: 100%;
+  }
+}
+
+@media (min-width: 900px) {
+  .week {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 30%;
+    padding-right: 30%;
+    margin: 20px;
+  }
+  .tablerow {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+
+    width: 100%;
+
+  }
+  .activity-details {
+    align-items: center;
+    background: #dcdcdc;
+    display: flex;
+    margin: 1px auto;
+    justify-content: space-between;
+    width: 39%;
   }
 }
