@@ -3,7 +3,7 @@ import "./activity.css"
 
 class Activity extends React.Component {
   state = {
-    newActivity: ""
+    newActivity: "",
   }
 
   handleOnChange = (event) => {

@@ -8,8 +8,8 @@ class Calendar extends React.Component {
     return (
       <div className="calendar">
         <div className="select-week">
-          <div> ⇦ Previous week</div>
-          <div> Next week ⇨</div>
+          <div className="previous-week"> ⇦ Previous week</div>
+          <div className="next-week"> Next week ⇨</div>
         </div>
         <div className="weekdays">
           <div className="daybox">M</div>

@@ -7,17 +7,15 @@ import Footer from "./footer"
 
 class App extends React.Component {
 
-
   constructor(props) {
     super(props)
-
-  const activityList = JSON.parse(localStorage.getItem("saveActivities"))
-   if(activityList) {
-     this.state = {activities: activityList}
-   } else {
-     this.state = {activities: []}
+    const activityList = JSON.parse(localStorage.getItem("saveActivities"))
+     if(activityList) {
+       this.state = {activities: activityList }
+     } else {
+       this.state = {activities: []}
+     }
    }
-}
 
   componentDidUpdate(){
     localStorage.setItem("saveActivities", JSON.stringify(this.state.activities))
@@ -29,11 +27,7 @@ class App extends React.Component {
     this.setState({ activities: act })
   }
 
-
-
   printTime = (activityMinutes, indexcolumn, indexrow) => {
-
-
 
     let totalTime = this.state.activities[indexrow].days[indexcolumn] + parseInt(activityMinutes)
     const testActivities = this.state.activities
@@ -47,8 +41,6 @@ class App extends React.Component {
     const allActivities = this.state.activities
     allActivities.push({ id: Date.now(), title: activity, days: [0, 0, 0, 0, 0, 0, 0] })
 
-
-
     this.setState({
       activities: allActivities
     })
@@ -59,12 +51,16 @@ class App extends React.Component {
       <div>
         <Header />
 
-        <div className="input-activity">
-          <Activity addToActivities={this.addToCalendar}/>
-        </div>
+        <Activity addToActivities={this.addToCalendar} />
+
         <Calendar />
         {this.state.activities.map((listActivity, index) =>
-          <TableRow activityname={listActivity.title} days={listActivity.days} callbackTime={this.printTime} callbackDelete={this.deleteActivity} index={index}/>
+          <TableRow
+            activityname={listActivity.title}
+            days={listActivity.days}
+            callbackTime={this.printTime}
+            callbackDelete={this.deleteActivity}
+            index={index}/>
         )}
         <Footer />
       </div>

@@ -1,16 +1,11 @@
 .calendar {
+  background: white;
   display: flex;
-  flex-flow: wrap;
-  flex-direction: column;
-  justify-content: center;
-}
-.calendar-sticky {
-  display: flex;
-  flex-flow: wrap;
   flex-direction: column;
   justify-content: center;
   position: sticky;
-  top: 0px;
+  top: 94px;
+  margin: 0px auto;
 }
 .daybox {
   align-items: center;
@@ -55,6 +50,9 @@
     padding: 20px;
     width: 80px;
   }
+  .calendar {
+    top: 132px;
+  }
 }
 @media (min-width: 1120px) {
   .select-week{
@@ -65,5 +63,8 @@
     height: 120px;
     padding: 28px;
     width: 120px;
+  }
+  .calendar {
+    top: 136px;
   }
 }
