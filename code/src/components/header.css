@@ -1,42 +1,35 @@
 * {
-font-family: 'Roboto', sans-serif;
+font-family: 'Helvetica', sans-serif;
 }
 
 .header {
+  font-size: 14px;
   margin: 0px auto;
   padding: 0px;
-  width: 357px;
+  text-align: justify;
+  width: 356px;
 }
-
-.header h1 {
-  font-size: 30px;
-  text-align: center;
-}
-
-.header p {
-  font-size: 14px;
-  text-align: center;
-}
-
-.header ol {
-  font-size: 14px;
-  text-align: center;
-}
-
 .header-image {
   height: auto;
-  width: 357px;
+  width: 356px;
 }
-
-h1 {
-  color: #8dc746;
+.instructions {
+  text-align: left;
 }
 
 @media (min-width: 900px) {
   .header {
-    width: 567px;
+    width: 566px;
   }
-.header-image {
-  width: 567px;
+  .header-image {
+    width: 566px;
+  }
 }
+@media (min-width: 1120px) {
+  .header {
+    width: 846px;
+  }
+  .header-image {
+    width: 846px;
+  }
 }

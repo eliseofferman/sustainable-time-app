@@ -24,20 +24,23 @@ class Activity extends React.Component {
     return (
       <div className="activity">
         <form onSubmit={this.handleOnSubmit}>
-          <label>
-            <input
-              type="text"
-              name="activity"
-              placeholder="Type activity here"
-              value={this.state.newActivity}
-              onChange={this.handleOnChange}
-            />
-          </label>
-          <button className="activity-button">
-            <span className="button-text">
-              Click to submit activity
-            </span>
-          </button>
+          <div className="activity-wrapper">
+            <label>
+              <input
+                type="text"
+                name="activity"
+                placeholder="Type activity here"
+                value={this.state.newActivity}
+                onChange={this.handleOnChange}
+              />
+            </label>
+
+            <button className="activity-button">
+
+                Click to submit activity
+
+            </button>
+          </div>
         </form>
       </div>
     )

@@ -18,7 +18,7 @@ class Calendar extends React.Component {
           <div className="daybox">T</div>
           <div className="daybox">F</div>
           <div className="daybox">S</div>
-          <div className="daybox">S</div>
+          <div className="daybox last-daybox">S</div>
         </div>
       </div>
     )
