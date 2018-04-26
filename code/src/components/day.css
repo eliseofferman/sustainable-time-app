@@ -20,6 +20,12 @@
   text-align: center;
   width: 50px;
 }
+.not-active:last-child {
+  margin-right: 0px;
+}
+.active:last-child {
+  margin-right: 0px;
+}
 
 @media (min-width: 900px) {
   .not-active {
