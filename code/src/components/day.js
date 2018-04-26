@@ -20,8 +20,8 @@ class Day extends React.Component {
       }
       else if(time == null) {
       }
-        else {
-        this.props.callbackTimeTable(time, this.props.indexcolumn, this.props.indexrow)
+      else {
+      this.props.callbackTimeTable(time, this.props.indexcolumn, this.props.indexrow)
       }
   }
 

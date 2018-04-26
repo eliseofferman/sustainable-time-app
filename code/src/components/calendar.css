@@ -25,6 +25,9 @@
   text-align: center;
   width: 50px;
 }
+.last-daybox {
+  margin-right: 0px;
+}
 .select-week {
   background-color: #93f9b7;
   border: 4px solid #58e087;
@@ -55,7 +58,7 @@
 }
 @media (min-width: 1120px) {
   .select-week{
-    width: 847px;
+    width: 846px;
   }
   .daybox {
     font-size: 60px;
