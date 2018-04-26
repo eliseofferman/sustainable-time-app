@@ -17,11 +17,14 @@ class Day extends React.Component {
     let time = prompt("Add your time in minutes")
       if (!(time >= 0)) {
         time = prompt(`Sorry, "${time}" is not a correct number, please add your time in minutes`)
+        if(time >= 0) {
+          this.props.callbackTimeTable(time, this.props.indexcolumn, this.props.indexrow)
+        }
       }
       else if(time == null) {
       }
-        else {
-        this.props.callbackTimeTable(time, this.props.indexcolumn, this.props.indexrow)
+      else {
+      this.props.callbackTimeTable(time, this.props.indexcolumn, this.props.indexrow)
       }
   }
 
