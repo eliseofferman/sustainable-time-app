@@ -4,7 +4,9 @@ import "./day.css"
 class Day extends React.Component {
 
   renderTime = time => {
-    if (time < 60) {
+    if (time === 0) {
+      return "+"
+    } else if (time < 60) {
       return (`${time} min`)
     } else {
       const hours = Math.floor(time / 60)
