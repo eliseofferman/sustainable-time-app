@@ -1,8 +1,8 @@
 import React from "react"
-import Activity from "./activity"
+import Input from "./input"
 import Header from "./header"
 import Calendar from "./calendar"
-import TableRow from "./tablerow"
+import Activity from "./activity"
 import Footer from "./footer"
 
 class App extends React.Component {
@@ -10,34 +10,34 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     const activityList = JSON.parse(localStorage.getItem("saveActivities"))
-     if(activityList) {
-       this.state = {activities: activityList }
-     } else {
-       this.state = {activities: []}
-     }
-   }
+    if (activityList) {
+      this.state = { activities: activityList }
+    } else {
+      this.state = { activities: [] }
+    }
+  }
 
-  componentDidUpdate(){
+  componentDidUpdate() {
     localStorage.setItem("saveActivities", JSON.stringify(this.state.activities))
   }
 
-  deleteActivity = (index) => {
+  deleteActivity = index => {
     const act = this.state.activities
     act.splice(index, 1)
     this.setState({ activities: act })
   }
 
-  printTime = (activityMinutes, indexcolumn, indexrow) => {
-
-    let totalTime = this.state.activities[indexrow].days[indexcolumn] + parseInt(activityMinutes)
-    const testActivities = this.state.activities
+  printTime = (userInputMinutes, indexcolumn, indexrow) => {
+    let arraypPositionValue = this.state.activities[indexrow].days[indexcolumn]
+    const totalTime = arraypPositionValue + parseInt(userInputMinutes)
+    const saveState = this.state.activities
     this.state.activities[indexrow].days[indexcolumn] = totalTime
     this.setState({
-    activities: testActivities
+      activities: saveState
     })
-}
+  }
 
-  addToCalendar = (activity) => {
+  addToCalendar = activity => {
     const allActivities = this.state.activities
     allActivities.push({ id: Date.now(), title: activity, days: [0, 0, 0, 0, 0, 0, 0] })
 
@@ -50,18 +50,15 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-
-        <Activity addToActivities={this.addToCalendar} />
-
+        <Input addToActivities={this.addToCalendar} />
         <Calendar />
         {this.state.activities.map((listActivity, index) =>
-          <TableRow
+          <Activity
             activityname={listActivity.title}
             days={listActivity.days}
-            callbackTime={this.printTime}
+            callbackPrintTime={this.printTime}
             callbackDelete={this.deleteActivity}
-            index={index}/>
-        )}
+            index={index} />)}
         <Footer />
       </div>
     )

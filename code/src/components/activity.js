@@ -1,53 +1,51 @@
 import React from "react"
+import Day from "./day"
 import "./activity.css"
 
 class Activity extends React.Component {
-  state = {
-    newActivity: "",
-  }
 
-  handleOnChange = (event) => {
-    this.setState ({
-      newActivity: event.target.value
-    })
-  }
+ renderTotalActivityTime = () => {
+   const numbers = this.props.days
+   let sum = 0
+   for (let i = 0; i < numbers.length; i++) {
+     sum += numbers[i]
+   }
+   if (sum < 60) {
+     return (`${sum} min`)
+   } else {
+     const hours = Math.floor(sum / 60)
+     sum = sum - (hours * 60)
+     return (`${hours}hr, ${sum}min`)
+   }
+ }
 
-  handleOnSubmit = (event) => {
-    event.preventDefault()
-    this.props.addToActivities(this.state.newActivity)
-    this.setState({
-      newActivity: ""
-    })
+  deleteRow = () => {
+    this.props.callbackDelete(this.props.index)
   }
 
   render() {
     return (
-      <div className="activity">
-        <form onSubmit={this.handleOnSubmit}>
-          <div className="activity-wrapper">
-            <label>
-              <input
-                type="text"
-                name="activity"
-                placeholder="Type activity here"
-                value={this.state.newActivity}
-                onChange={this.handleOnChange}
-              />
-            </label>
+      <div className="tablerow">
 
-            <button className="activity-button">
+        <div className="week">
+          {this.props.days.map((day, index) =>
+            <Day
+              time={day}
+              callbackRenderTime={this.props.callbackPrintTime}
+              indexcolumn={index}
+              indexrow={this.props.index} />)}
+        </div>
 
-                Click to submit activity
-
-            </button>
+        <div className="activity-details">
+          <h4>{this.props.activityname}</h4>
+          <h4>Total time: {this.renderTotalActivityTime()}</h4>
+          <div className="removeButton" onClick={this.deleteRow}>
+            <button>🗑️</button>
           </div>
-        </form>
+        </div>
       </div>
     )
   }
 }
 
 export default Activity
-
-//
-// onSubmit={this.handleOnSubmit}

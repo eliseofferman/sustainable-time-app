@@ -7,6 +7,7 @@
   top: 94px;
   margin: 0px auto;
 }
+
 .daybox {
   align-items: center;
   background-color: #93d6f9;
@@ -20,9 +21,11 @@
   text-align: center;
   width: 50px;
 }
+
 .last-daybox {
   margin-right: 0px;
 }
+
 .select-week {
   background-color: #93f9b7;
   border: 4px solid #58e087;
@@ -34,6 +37,7 @@
   text-align: center;
   width: 356px;
 }
+
 .weekdays {
   margin: 0px auto;
   display: flex;
@@ -41,7 +45,7 @@
 }
 
 @media (min-width: 900px) {
-  .select-week{
+  .select-week {
     width: 566px;
   }
   .daybox {
@@ -54,8 +58,9 @@
     top: 132px;
   }
 }
+
 @media (min-width: 1120px) {
-  .select-week{
+  .select-week {
     width: 846px;
   }
   .daybox {
