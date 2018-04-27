@@ -3,13 +3,13 @@ import Day from "./day"
 import "./activity.css"
 
 class Activity extends React.Component {
+
  renderTotalActivityTime = () => {
    const numbers = this.props.days
    let sum = 0
    for (let i = 0; i < numbers.length; i++) {
      sum += numbers[i]
    }
-
    if (sum < 60) {
      return (`${sum} min`)
    } else {
