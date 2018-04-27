@@ -24,31 +24,28 @@ class Activity extends React.Component {
   }
 
   render() {
-
     return (
       <div className="tablerow">
 
         <div className="week">
-          {this.props.days.map(( day, index) =>
+          {this.props.days.map((day, index) =>
             <Day
               time={day}
               callbackRenderTime={this.props.callbackPrintTime}
               indexcolumn={index}
-              indexrow={this.props.index}
-            />) }
+              indexrow={this.props.index} />)}
         </div>
 
         <div className="activity-details">
           <h4>{this.props.activityname}</h4>
           <h4>Total time: {this.renderTotalActivityTime()}</h4>
-          <div className="removeButton"onClick={this.deleteRow}>
+          <div className="removeButton" onClick={this.deleteRow}>
             <button>🗑️</button>
           </div>
         </div>
       </div>
-        )
-        }
-
-        }
+    )
+  }
+}
 
 export default Activity

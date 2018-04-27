@@ -17,17 +17,15 @@ class Day extends React.Component {
 
   handleClick = () => {
     let userInputTime = prompt("Add your time in minutes")
-      if (!(userInputTime >= 0)) {
-        userInputTime = prompt(`Sorry, "${userInputTime}" is not a correct number, please add your time in minutes`)
-        if(userInputTime >= 0) {
-          this.props.callbackRenderTime(userInputTime, this.props.indexcolumn, this.props.indexrow)
-        }
+    if (!(userInputTime >= 0)) {
+      userInputTime = prompt(`Sorry, "${userInputTime}" is not a correct number, please add your time in minutes`)
+      if (userInputTime >= 0) {
+        this.props.callbackRenderTime(userInputTime, this.props.indexcolumn, this.props.indexrow)
       }
-      else if(userInputTime == null) {
-      }
-      else {
+    } else if (userInputTime == null) {
+    } else {
       this.props.callbackRenderTime(userInputTime, this.props.indexcolumn, this.props.indexrow)
-      }
+    }
   }
 
   render() {
@@ -39,7 +37,5 @@ class Day extends React.Component {
     )
   }
 }
-
-
 
 export default Day

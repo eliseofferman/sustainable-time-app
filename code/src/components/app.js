@@ -10,33 +10,33 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     const activityList = JSON.parse(localStorage.getItem("saveActivities"))
-     if(activityList) {
-       this.state = {activities: activityList }
-     } else {
-       this.state = {activities: []}
-     }
-   }
+    if (activityList) {
+      this.state = { activities: activityList }
+    } else {
+      this.state = { activities: [] }
+    }
+  }
 
-  componentDidUpdate(){
+  componentDidUpdate() {
     localStorage.setItem("saveActivities", JSON.stringify(this.state.activities))
   }
 
-  deleteActivity = (index) => {
+  deleteActivity = index => {
     const act = this.state.activities
     act.splice(index, 1)
     this.setState({ activities: act })
   }
 
   printTime = (userInputMinutes, indexcolumn, indexrow) => {
-    let totalTime = this.state.activities[indexrow].days[indexcolumn] + parseInt(userInputMinutes)
+    const totalTime = this.state.activities[indexrow].days[indexcolumn] + parseInt(userInputMinutes)
     const saveState = this.state.activities
     this.state.activities[indexrow].days[indexcolumn] = totalTime
     this.setState({
-    activities: saveState
+      activities: saveState
     })
-}
+  }
 
-  addToCalendar = (activity) => {
+  addToCalendar = activity => {
     const allActivities = this.state.activities
     allActivities.push({ id: Date.now(), title: activity, days: [0, 0, 0, 0, 0, 0, 0] })
 
@@ -59,8 +59,7 @@ class App extends React.Component {
             days={listActivity.days}
             callbackPrintTime={this.printTime}
             callbackDelete={this.deleteActivity}
-            index={index}/>
-        )}
+            index={index} />)}
         <Footer />
       </div>
     )

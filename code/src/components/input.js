@@ -3,16 +3,16 @@ import "./input.css"
 
 class Input extends React.Component {
   state = {
-    newActivity: "",
+    newActivity: ""
   }
 
-  handleOnChange = (event) => {
-    this.setState ({
+  handleOnChange = event => {
+    this.setState({
       newActivity: event.target.value
     })
   }
 
-  handleOnSubmit = (event) => {
+  handleOnSubmit = event => {
     event.preventDefault()
     this.props.addToActivities(this.state.newActivity)
     this.setState({
@@ -31,14 +31,10 @@ class Input extends React.Component {
                 name="activity"
                 placeholder="Type activity here"
                 value={this.state.newActivity}
-                onChange={this.handleOnChange}
-              />
+                onChange={this.handleOnChange} />
             </label>
-
             <button className="activity-button">
-
-                Click to submit activity
-
+              Click to submit activity
             </button>
           </div>
         </form>

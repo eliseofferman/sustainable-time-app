@@ -12,6 +12,7 @@
   text-align: center;
   text-transform: uppercase;
 }
+
 .week {
   display: flex;
   flex-flow: wrap;
@@ -52,6 +53,7 @@
     width: 567px;
   }
 }
+
 @media (min-width: 900px) {
   .week {
     width: 567px;
@@ -60,6 +62,7 @@
     width: 567px;
   }
 }
+
 @media (min-width: 1120px) {
   .activity-details {
     width: 847px;

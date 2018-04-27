@@ -1,12 +1,12 @@
 import React from "react"
 import "./header.css"
 
-class Header extends React.Component{
+class Header extends React.Component {
   render() {
     return (
       <div className="header">
         <div className="header-image-container">
-          <img className="header-image" src= { require('./images/time.jpeg') }  />
+          <img className="header-image" src= { require('./images/time.jpeg') } />
         </div>
         <h2>The Sustainable Time App is a habit and time tracker. </h2>
         <div className="instructions">
