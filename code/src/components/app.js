@@ -28,7 +28,8 @@ class App extends React.Component {
   }
 
   printTime = (userInputMinutes, indexcolumn, indexrow) => {
-    const totalTime = this.state.activities[indexrow].days[indexcolumn] + parseInt(userInputMinutes)
+    let arraypPositionValue = this.state.activities[indexrow].days[indexcolumn]
+    const totalTime = arraypPositionValue + parseInt(userInputMinutes)
     const saveState = this.state.activities
     this.state.activities[indexrow].days[indexcolumn] = totalTime
     this.setState({
@@ -49,9 +50,7 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-
         <Input addToActivities={this.addToCalendar} />
-
         <Calendar />
         {this.state.activities.map((listActivity, index) =>
           <Activity
