@@ -1,8 +1,8 @@
 import React from "react"
-import Activity from "./activity"
+import Input from "./input"
 import Header from "./header"
 import Calendar from "./calendar"
-import TableRow from "./tablerow"
+import Activity from "./activity"
 import Footer from "./footer"
 
 class App extends React.Component {
@@ -27,13 +27,12 @@ class App extends React.Component {
     this.setState({ activities: act })
   }
 
-  printTime = (activityMinutes, indexcolumn, indexrow) => {
-
-    let totalTime = this.state.activities[indexrow].days[indexcolumn] + parseInt(activityMinutes)
-    const testActivities = this.state.activities
+  printTime = (userInputMinutes, indexcolumn, indexrow) => {
+    let totalTime = this.state.activities[indexrow].days[indexcolumn] + parseInt(userInputMinutes)
+    const saveState = this.state.activities
     this.state.activities[indexrow].days[indexcolumn] = totalTime
     this.setState({
-    activities: testActivities
+    activities: saveState
     })
 }
 
@@ -51,14 +50,14 @@ class App extends React.Component {
       <div>
         <Header />
 
-        <Activity addToActivities={this.addToCalendar} />
+        <Input addToActivities={this.addToCalendar} />
 
         <Calendar />
         {this.state.activities.map((listActivity, index) =>
-          <TableRow
+          <Activity
             activityname={listActivity.title}
             days={listActivity.days}
-            callbackTime={this.printTime}
+            callbackPrintTime={this.printTime}
             callbackDelete={this.deleteActivity}
             index={index}/>
         )}
