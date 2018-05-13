@@ -23,6 +23,7 @@ class Day extends React.Component {
         this.props.callbackRenderTime(userInputTime, this.props.indexcolumn, this.props.indexrow)
       }
     } else if (userInputTime == null) {
+      return null
     } else {
       this.props.callbackRenderTime(userInputTime, this.props.indexcolumn, this.props.indexrow)
     }

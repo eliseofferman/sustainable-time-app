@@ -44,6 +44,3 @@ class Input extends React.Component {
 }
 
 export default Input
-
-//
-// onSubmit={this.handleOnSubmit}
